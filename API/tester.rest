@@ -1,0 +1,50 @@
+GET http://localhost:3000/api/users
+
+###
+
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin",
+    "email": "admin@user.cl",
+    "roles": ["admin"]
+}
+
+###
+
+GET http://localhost:3000/users/60be8574acc56518c075d517
+
+###
+
+PUT http://localhost:3000/users/60be8574acc56518c075d517
+Content-Type: application/json
+
+{
+    "username": "testeruser01"
+}
+
+###
+
+DELETE http://localhost:3000/users/60be8574acc56518c075d517
+
+###
+POST http://localhost:3000/api/auth/signin
+Content-Type: application/json
+
+{
+    "password": "admin",
+    "email": "admin@user.cl"
+}
+
+###
+POST http://localhost:3000/api/auth/signup
+Content-Type: application/json
+
+{
+    "username": "asdqwe01",
+    "password": "user10",
+    "email": "asdqwe01@user.cl",
+    "roles": ["asdqweqweasd", "asdasd"]
+}
